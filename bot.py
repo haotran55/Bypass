@@ -13,6 +13,7 @@ bot = telebot.TeleBot(bot_token)
 #Điền id tele của mình
 processes = []
 bot_active = True
+admin_mode = False
 ADMIN_ID = '7658079324'
 
 name_bot = "Bypass"
