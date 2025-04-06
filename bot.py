@@ -12,6 +12,7 @@ bot_token = '8025225779:AAHjpXQ9OZ3aoiv1pQn_tFQHezKDtza0Rgo'
 bot = telebot.TeleBot(bot_token)
 #Điền id tele của mình
 processes = []
+bot_active = True
 ADMIN_ID = '7658079324'
 
 name_bot = "Bypass"
@@ -43,7 +44,7 @@ def startkey(message):
     bot.reply_to(message, text='Vui Lòng Chờ🤔')
     user_id = message.from_user.id
     if is_key_expired(user_id):
-        key = "thanhdev" + str(int(user_id) * int(datetime.date.today().day) - 12666)
+        key = "haoesport" + str(int(user_id) * int(datetime.date.today().day) - 12666)
         key = "https://dichvukey.site/key.html?key=" + key
         api_token = ''
         url = requests.get(f'https://link4m.co/api-shorten/v2?api=662270a8632b4b42511ca862&url={api_token}&url={key}').json()
@@ -125,6 +126,7 @@ def superspam(message):
 def spam(message):
     user_id = message.from_user.id
     current_time = time.time()
+    global bot_active
     if not bot_active:
         msg = bot.reply_to(message, 'Bot hiện đang tắt.')
         time.sleep(10)
@@ -215,7 +217,7 @@ Danh sách lệnh:
 │• /key {key}: Nhập key Thưởng
 │• /spam : Spam free
 │• /superspam : SpamVip
-│• /help: Danh sách lệnh
+│• /bot: Danh sách lệnh
 │• /status : Admin
 │• /restart : Admin
 │• /stop : Admin
