@@ -8,11 +8,11 @@ import subprocess
 import requests
 import sys
 #Điền bot token của bạn
-bot_token = '7483342854:AAG2RO0uMjdU7tdDczLRgfxGxrSdBbFzImU'
+bot_token = '8025225779:AAHjpXQ9OZ3aoiv1pQn_tFQHezKDtza0Rgo'
 bot = telebot.TeleBot(bot_token)
 #Điền id tele của mình
 processes = []
-ADMIN_ID = '1780881954'
+ADMIN_ID = '7658079324'
 
 name_bot = "Bypass"
 
